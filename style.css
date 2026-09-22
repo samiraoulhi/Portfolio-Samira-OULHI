@@ -1,0 +1,360 @@
+/* =========================================================
+   SAMIRA OULHI — Portfolio
+   Design simple et épuré, bleu, dans l'esprit du CV.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --blue:        #1F5FA6;
+  --blue-dark:   #14406F;
+  --blue-light:  #EAF2FB;
+  --blue-border: #CFE0F2;
+  --text:        #23303D;
+  --text-soft:   #62717F;
+  --bg:          #FFFFFF;
+  --bg-soft:     #F6F9FC;
+  --border:      #E4EAF0;
+  --radius: 10px;
+  --max: 900px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: var(--blue); }
+
+h1, h2, h3, h4{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: var(--blue-dark);
+}
+
+p{ margin: 0 0 .8em 0; }
+p:last-child{ margin-bottom: 0; }
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------------- Nav ---------------- */
+header.topbar{
+  position: sticky; top:0; z-index: 20;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+header.topbar .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 24px;
+}
+.brand{
+  font-family:'Poppins', sans-serif;
+  font-weight:600; font-size:1.05rem;
+  text-decoration:none; color: var(--blue-dark);
+}
+nav.primary-nav ul{
+  list-style:none; display:flex; gap:24px; margin:0; padding:0;
+}
+nav.primary-nav a{
+  text-decoration:none; color: var(--text-soft);
+  font-size:.92rem; font-weight:500;
+}
+nav.primary-nav a:hover, nav.primary-nav a:focus-visible{ color: var(--blue); }
+
+@media (max-width: 680px){
+  nav.primary-nav{ display:none; }
+}
+
+/* ---------------- Hero ---------------- */
+.hero{
+  background: linear-gradient(180deg, var(--blue-light) 0%, #FFFFFF 100%);
+  padding: 56px 0 44px;
+  border-bottom: 1px solid var(--border);
+}
+.hero h1{
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+.hero .role{
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  max-width: 52ch;
+}
+.hero .role strong{ color: var(--blue-dark); }
+
+.contact-row{
+  margin-top: 22px;
+  display:flex; flex-wrap:wrap; gap: 10px 22px;
+  font-size:.94rem;
+}
+.contact-row a, .contact-row span{
+  color: var(--text-soft);
+  text-decoration:none;
+}
+.contact-row a:hover{ color: var(--blue); }
+
+/* ---------------- Sections ---------------- */
+section{ padding: 48px 0; }
+section + section{ border-top: 1px solid var(--border); }
+
+.section-title{
+  font-size: 1.4rem;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--blue);
+  display:inline-block;
+}
+
+.lede{
+  max-width: 62ch;
+  color: var(--text-soft);
+}
+.lede strong{ color: var(--text); }
+
+/* ---------------- Compétences ---------------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  margin-top: 6px;
+}
+.skill-group h3{
+  font-size: .98rem;
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+}
+.tag-row{ display:flex; flex-wrap: wrap; gap: 8px; }
+.tag{
+  font-size:.84rem;
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.soft-list{
+  margin-top: 26px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 16px 24px;
+}
+.soft-item h4{ font-size:.98rem; margin-bottom:2px; }
+.soft-item p{ font-size:.9rem; color: var(--text-soft); }
+.note-inline{
+  margin-top:18px;
+  font-size:.85rem;
+  color: var(--text-soft);
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+/* ---------------- Travaux pratiques ---------------- */
+.tp-sem{
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-soft);
+  margin: 28px 0 12px;
+}
+.tp-sem:first-of-type{ margin-top: 0; }
+.tp-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 14px;
+}
+.tp-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display:flex; flex-direction:column; gap:12px;
+}
+.tp-card h4{
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.tp-links{ display:flex; gap: 8px; margin-top:auto; }
+.tp-link{
+  flex:1;
+  text-align:center;
+  font-size:.78rem;
+  font-weight: 500;
+  color: var(--blue-dark);
+  background: #fff;
+  border: 1px solid var(--blue-border);
+  border-radius: 6px;
+  padding: 6px 4px;
+  text-decoration:none;
+}
+.tp-link:hover{ background: var(--blue-light); }
+
+/* ---------------- Projets ---------------- */
+.project-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 18px;
+}
+.project-card{
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.project-card .when{
+  font-size:.82rem; color: var(--blue); font-weight:600;
+}
+.project-card h3{ font-size: 1.05rem; }
+.project-card .cadre{
+  font-size:.82rem; color: var(--text-soft);
+}
+.project-card .field{ font-size:.9rem; }
+.project-card .field .k{
+  display:block; font-weight:600; color: var(--blue-dark);
+  font-size:.78rem; margin-bottom:2px;
+}
+.project-card .tag-row{ margin-top:auto; padding-top:6px; }
+.project-card .tag{ font-size:.76rem; padding:3px 10px; }
+.gh-link{
+  align-self:flex-start;
+  font-size:.84rem; font-weight:600;
+  color: var(--blue); text-decoration:none;
+}
+.gh-link:hover{ text-decoration: underline; }
+
+/* ---------------- Motivation ---------------- */
+.motivation{
+  margin: 20px 0 0;
+  padding: 18px 20px;
+  background: var(--blue-light);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  font-size: .96rem;
+  color: var(--text);
+  max-width: 66ch;
+}
+
+/* ---------------- Expériences / Formation ---------------- */
+.timeline{ display:flex; flex-direction:column; gap: 26px; }
+.timeline-item{ position:relative; padding-left: 22px; }
+.timeline-item::before{
+  content:""; position:absolute; left:0; top:6px;
+  width:10px; height:10px; border-radius:50%;
+  background: var(--blue);
+}
+.timeline-item .when{
+  font-size:.84rem; color: var(--blue); font-weight:600; margin-bottom:2px;
+}
+.timeline-item h3{ font-size:1.02rem; }
+.timeline-item .where{
+  font-size:.88rem; color: var(--text-soft); margin: 2px 0 8px;
+}
+.timeline-item ul{ margin: 6px 0 0; padding-left: 18px; font-size:.92rem; }
+.timeline-item li{ margin-bottom: 4px; }
+.timeline-item li:last-child{ margin-bottom:0; }
+.timeline-item .takeaway{
+  font-size:.88rem; color: var(--text-soft); margin: 4px 0 8px;
+}
+.timeline-item .takeaway .k{
+  display:block; font-weight:600; color: var(--blue-dark); font-size:.78rem; margin-bottom:2px;
+}
+
+.stat-row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+.stat{
+  font-size:.8rem; color: var(--blue-dark);
+  background: var(--blue-light);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.stat b{ font-weight:700; }
+
+/* ---------------- Langues / intérêts ---------------- */
+.trio{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 22px;
+}
+.trio h3{ font-size: .95rem; margin-bottom: 10px; }
+.lang-row{ display:flex; justify-content:space-between; max-width:200px; font-size:.92rem; margin-bottom:6px; }
+
+/* ---------------- Certifications ---------------- */
+.cert-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 18px;
+}
+.cert-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.cert-card h4{ font-size: 1rem; margin-bottom: 6px; }
+.cert-card p{ font-size:.88rem; color: var(--text-soft); }
+
+/* ---------------- Références ---------------- */
+.ref-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.ref-card{
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.ref-tag{
+  font-size:.74rem; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+  color: var(--blue); margin-bottom: 6px;
+}
+.ref-card h4{ font-size: 1rem; margin-bottom: 2px; }
+.ref-role{ font-size:.88rem; color: var(--text-soft); margin-bottom: 6px; }
+.ref-contact{ font-size:.86rem; color: var(--text-soft); font-style: italic; }
+
+/* ---------------- Footer ---------------- */
+footer.colophon{
+  background: var(--blue-dark);
+  color: #DCE9F7;
+  padding: 44px 0;
+  margin-top: 10px;
+}
+footer.colophon h2{ color: #fff; font-size: 1.4rem; max-width: 20ch; }
+footer.colophon .contact-list{
+  list-style:none; margin:18px 0 0; padding:0;
+  display:flex; flex-wrap:wrap; gap: 10px 22px;
+  font-size:.92rem;
+}
+footer.colophon .contact-list a{ color: #fff; }
+
+/* ---------------- Accessibilité ---------------- */
+a:focus-visible, button:focus-visible{
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+@media (max-width: 560px){
+  section{ padding: 34px 0; }
+  .hero{ padding: 40px 0 32px; }
+}
