@@ -108,8 +108,8 @@
             <span class="tag">OpenCV</span>
             <span class="tag">Machine Learning</span>
             <span class="tag">Deep Learning</span>
-            <span class="tag">LLM / agents IA</span>
-            <span class="tag">LiDAR</span>
+            <span class="tag">LLM / agents IA(en cours)</span>
+            <span class="tag">LiDAR / 3D </span>
           </div>
         </div>
         <div class="skill-group">
@@ -165,46 +165,60 @@
       <h2 class="section-title">Formation</h2>
 
       <div class="timeline">
-
-        <!-- ================= M2 SIA ================= -->
-        <div class="timeline-item">
-          <p class="when">2026 – 2027</p>
-          <h3>Master 2 — Signal, Image et Apprentissage Automatique</h3>
-          <p class="where">Université Toulouse III Paul Sabatier, Toulouse</p>
-          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Approfondissement en vision par ordinateur, apprentissage profond et traitement avancé de l'image, de la vidéo et du signal, avec une orientation projet et recherche.</p>
-
-          <div class="field"><span class="k">Techniques abordées</span></div>
-          <div class="tag-row">
-            <span class="tag">Image</span><span class="tag">Vidéo</span><span class="tag">Signal</span><span class="tag">Vision par ordinateur</span><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Compression vidéo</span><span class="tag">Temps-fréquence &amp; ondelettes</span>
-          </div>
-
-          <div class="module-grid">
+<!-- ===== M2 SIA ===== -->
+      <div class="timeline-item">
+        <p class="when">2026 – 2027</p>
+        <h3>Master 2 — Signal, Image et Apprentissage Automatique</h3>
+        <p class="where">Université Toulouse III Paul Sabatier, Toulouse</p>
+        <p class="takeaway"><span class="k">Ce que j'en retiens</span> Approfondissement en vision par ordinateur, apprentissage profond et traitement avancé de l'image, de la vidéo et du signal, avec une orientation projet et recherche.</p>
+        <div class="field"><span class="k">Techniques abordées</span></div>
+        <div class="tag-row"><span class="tag">Image</span><span class="tag">Vidéo</span><span class="tag">Signal</span><span class="tag">Vision par ordinateur</span><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Séparation de sources</span><span class="tag">Compression vidéo</span><span class="tag">Observation de la Terre</span><span class="tag">Cartographie</span><span class="tag">Temps-fréquence &amp; ondelettes</span></div>
+        <div class="module-grid">
             <div class="module-card">
               <h5>Vision par ordinateur</h5>
-              <div class="field"><span class="k">TP / travaux</span> À compléter (calibration de caméra, reconstruction 3D…)</div>
-              <div class="field"><span class="k">Techniques</span> Géométrie multi-vues, détection et description de points, reconstruction 3D</div>
+              <div class="field"><span class="k">Techniques</span> Calibration de caméra (paramètres intrinsèques et extrinsèques), géométrie multi-vues et reconstruction 3D, détection et description de points, segmentation, recalage 3D par ICP (Iterative Closest Point), localisation par estimation de pose (PnP)</div>
               <div class="field"><span class="k">Logiciels</span> Python, OpenCV, MATLAB</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Passer d'images 2D à une scène 3D mesurable, recaler des nuages de points et estimer la position d'une caméra, avec l'importance d'une bonne calibration.</div>
             </div>
             <div class="module-card">
               <h5>Machine Learning</h5>
-              <div class="field"><span class="k">TP / travaux</span> À compléter</div>
-              <div class="field"><span class="k">Techniques</span> Apprentissage supervisé et profond</div>
+              <div class="field"><span class="k">Techniques</span> Apprentissage supervisé et profond, réseaux de neurones, évaluation de modèles</div>
               <div class="field"><span class="k">Logiciels</span> Python, PyTorch, TensorFlow</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Concevoir, entraîner et évaluer des modèles en tenant compte des contraintes de données et de performance.</div>
             </div>
             <div class="module-card">
-              <h5>Compression vidéo</h5>
-              <div class="field"><span class="k">TP / travaux</span> À compléter</div>
-              <div class="field"><span class="k">Techniques</span> Codage et compression vidéo</div>
+              <h5>Séparation de sources</h5>
+              <div class="field"><span class="k">Techniques</span> Séparation aveugle de sources, analyse en composantes indépendantes (ICA), analyse en composantes principales (ACP), modèles de mélange de signaux</div>
+              <div class="field"><span class="k">Logiciels</span> MATLAB, Python</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Retrouver des signaux d'origine à partir de mélanges observés, sans connaître le mélange.</div>
+            </div>
+            <div class="module-card">
+              <h5>Compression d'images et de vidéos</h5>
+              <div class="field"><span class="k">Techniques</span> JPEG et MJPEG, MPEG, transformée en cosinus discrète (DCT), quantification, codage entropique (Huffman), estimation et compensation de mouvement, codecs H.264/AVC, H.265/HEVC et AV1, compromis débit-distorsion</div>
               <div class="field"><span class="k">Logiciels</span> Python, MATLAB</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Le compromis entre débit et qualité, et le rôle de la compression dans les systèmes temps réel et embarqués.</div>
+            </div>
+            <div class="module-card">
+              <h5>Observation de la Terre</h5>
+              <div class="field"><span class="k">Techniques</span> Télédétection, imagerie multispectrale, hyperspectrale et radar (SAR), traitement d'images satellitaires</div>
+              <div class="field"><span class="k">Logiciels</span> Python, MATLAB</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Exploiter des images prises depuis l'espace pour observer et suivre la Terre.</div>
+            </div>
+            <div class="module-card">
+              <h5>Cartographie</h5>
+              <div class="field"><span class="k">Techniques</span> Géoréférencement, projections cartographiques, modèles numériques de terrain, photogrammétrie, systèmes d'information géographique (SIG)</div>
+              <div class="field"><span class="k">Logiciels</span> Python, MATLAB</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Produire une carte fiable à partir de mesures et d'images, en maîtrisant les systèmes de coordonnées et les distorsions.</div>
             </div>
             <div class="module-card">
               <h5>Outils avancés — image, vidéo et signal</h5>
-              <div class="field"><span class="k">TP / travaux</span> TP temps-fréquence / temps-échelle ; TP analyse spectrale (modèles AR)</div>
               <div class="field"><span class="k">Techniques</span> Wigner-Ville, STFT, ondelettes ; Yule-Walker, Levinson, Burg, analyse spectrale haute résolution</div>
               <div class="field"><span class="k">Logiciels</span> MATLAB, LaTeX (comptes rendus)</div>
+              <div class="field retenu"><span class="k">Ce que j'en retiens</span> Choisir la bonne représentation (temps-fréquence ou modèle AR) selon la résolution recherchée et la nature du signal.</div>
             </div>
-          </div>
         </div>
+      </div>
+
 
              <!-- ===== M1 SIA ===== -->
       <div class="timeline-item">
