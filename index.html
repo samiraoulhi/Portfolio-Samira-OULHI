@@ -6,6 +6,16 @@
 <title>Samira Oulhi — Machine Learning & IA embarquée</title>
 <meta name="description" content="Portfolio de Samira Oulhi, étudiante en Machine Learning et traitement des données — recherche d'un stage de 6 mois dès mars 2027 en perception, reconstruction 3D, vision et IA embarquée.">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Blocs modules (à déplacer dans style.css si tu préfères) */
+  .sem-title { margin: 22px 0 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; opacity: .75; }
+  .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 8px; }
+  .module-card { border: 1px solid rgba(128,128,128,.3); border-radius: 10px; padding: 14px 16px; }
+  .module-card h5 { margin: 0 0 8px; font-size: 1rem; }
+  .module-card .field { font-size: .9rem; margin-top: 6px; }
+  .module-card .k { display: block; font-weight: 700; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; opacity: .7; }
+  .badge-soon { display: inline-block; font-size: .72rem; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(128,128,128,.5); margin-bottom: 6px; }
+</style>
 </head>
 <body>
 
@@ -19,7 +29,6 @@
         <li><a href="#formation">Formation</a></li>
         <li><a href="#experiences">Expériences</a></li>
         <li><a href="#projets">Projets</a></li>
-        <li><a href="#tp">TP</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#references">Références</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -68,7 +77,7 @@
     <div class="stat-row">
       <span class="stat"><b>3<sup>e</sup>/24</b> — promotion M1 SIA</span>
       <span class="stat">Mention <b>Bien</b> — M2 Systèmes Embarqués</span>
-      <span class="stat"><b>6</b> projets vision / embarqué</span>
+      <span class="stat"><b>8</b> projets vision / embarqué / IA</span>
       <span class="stat"><b>3</b> stages en électronique &amp; systèmes</span>
       <span class="stat">Disponible dès <b>mars 2027</b></span>
     </div>
@@ -84,6 +93,7 @@
           <div class="tag-row">
             <span class="tag">Python</span>
             <span class="tag">C / C++</span>
+            <span class="tag">Qt</span>
             <span class="tag">MATLAB / Simulink</span>
             <span class="tag">Git / GitHub</span>
             <span class="tag">Linux</span>
@@ -98,6 +108,7 @@
             <span class="tag">OpenCV</span>
             <span class="tag">Machine Learning</span>
             <span class="tag">Deep Learning</span>
+            <span class="tag">LLM / agents IA</span>
             <span class="tag">LiDAR</span>
           </div>
         </div>
@@ -148,72 +159,142 @@
 </div>
       
   </section>
-  <section id="tp">
+
+<section id="formation">
     <div class="wrap">
-      <h2 class="section-title">Travaux pratiques</h2>
-      <p class="lede" style="margin-bottom:26px;">
-        Une sélection de travaux pratiques réalisés en
-        <strong>vision par ordinateur, traitement d'image, traitement du signal
-        et apprentissage automatique</strong>.
-      </p>
+      <h2 class="section-title">Formation</h2>
 
-      <h3 class="tp-sem">Semestre 7</h3>
-      <div class="tp-grid">
+      <div class="timeline">
 
-        <div class="tp-card">
-          <h4>Traitement des images</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
+        <!-- ================= M2 SIA ================= -->
+        <div class="timeline-item">
+          <p class="when">2026 – 2027</p>
+          <h3>Master 2 — Signal, Image et Apprentissage Automatique</h3>
+          <p class="where">Université Toulouse III Paul Sabatier, Toulouse</p>
+          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Approfondissement en vision par ordinateur, apprentissage profond et traitement avancé de l'image, de la vidéo et du signal, avec une orientation projet et recherche.</p>
+
+          <div class="module-grid">
+            <div class="module-card">
+              <h5>Vision par ordinateur</h5>
+              <div class="field"><span class="k">TP / travaux</span> À compléter (calibration de caméra, reconstruction 3D…)</div>
+              <div class="field"><span class="k">Techniques</span> Géométrie multi-vues, détection et description de points, reconstruction 3D</div>
+              <div class="field"><span class="k">Logiciels</span> Python, OpenCV, MATLAB</div>
+            </div>
+            <div class="module-card">
+              <h5>Machine Learning</h5>
+              <div class="field"><span class="k">TP / travaux</span> À compléter</div>
+              <div class="field"><span class="k">Techniques</span> Apprentissage supervisé et profond</div>
+              <div class="field"><span class="k">Logiciels</span> Python, PyTorch, TensorFlow</div>
+            </div>
+            <div class="module-card">
+              <h5>Compression vidéo</h5>
+              <div class="field"><span class="k">TP / travaux</span> À compléter</div>
+              <div class="field"><span class="k">Techniques</span> Codage et compression vidéo</div>
+              <div class="field"><span class="k">Logiciels</span> Python, MATLAB</div>
+            </div>
+            <div class="module-card">
+              <h5>Outils avancés — image, vidéo et signal</h5>
+              <div class="field"><span class="k">TP / travaux</span> TP temps-fréquence / temps-échelle ; TP analyse spectrale (modèles AR)</div>
+              <div class="field"><span class="k">Techniques</span> Wigner-Ville, STFT, ondelettes ; Yule-Walker, Levinson, Burg, analyse spectrale haute résolution</div>
+              <div class="field"><span class="k">Logiciels</span> MATLAB, LaTeX (comptes rendus)</div>
+            </div>
           </div>
         </div>
 
-        <div class="tp-card">
-          <h4>Introduction à l'exploitation statistique de données</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
+        <!-- ================= M1 SIA ================= -->
+        <div class="timeline-item">
+          <p class="when">2025 – 2026</p>
+          <h3>Master 1 — Signal, Image et Apprentissage Automatique</h3>
+          <p class="where">Université Toulouse III Paul Sabatier, Toulouse — 3<sup>e</sup> de promotion, mention Bien</p>
+          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Bases solides en machine learning, traitement d'images et analyse statistique de données — validées en tête de promotion sur plusieurs modules clés (apprentissage automatique, bureau d'études ML, capteurs optiques).</p>
+          <div class="stat-row">
+            <span class="stat">Moyenne générale <b>14,25/20</b></span>
+            <span class="stat">Apprentissage automatique <b>16,35/20</b> — 1<sup>er</sup>/24</span>
+            <span class="stat">Bureau d'études ML <b>16,09/20</b> — 1<sup>er</sup>/26</span>
+            <span class="stat">Capteurs optiques &amp; formation des images <b>16,85/20</b> — 2<sup>e</sup>/26</span>
+          </div>
+
+          <h4 class="sem-title">Semestre 7</h4>
+          <div class="module-grid">
+            <div class="module-card">
+              <h5>Traitement des images</h5>
+              <div class="field"><span class="k">TP / travaux</span> Rapport, code et données de TP</div>
+              <div class="field"><span class="k">Techniques</span> Filtrage, transformations, segmentation, analyse d'images</div>
+              <div class="field"><span class="k">Logiciels</span> Python, OpenCV, MATLAB</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+            <div class="module-card">
+              <h5>Introduction à l'exploitation statistique de données / IA</h5>
+              <div class="field"><span class="k">TP / travaux</span> Rapport, code et données de TP</div>
+              <div class="field"><span class="k">Techniques</span> ACP (analyse en composantes principales), AFD (analyse factorielle discriminante)</div>
+              <div class="field"><span class="k">Logiciels</span> Python (scikit-learn), MATLAB</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+          </div>
+
+          <h4 class="sem-title">Semestre 8</h4>
+          <div class="module-grid">
+            <div class="module-card">
+              <h5>Capteurs optiques et formation des images</h5>
+              <div class="field"><span class="k">TP / travaux</span> Rapport, code et données de TP</div>
+              <div class="field"><span class="k">Techniques</span> Formation de l'image, optique, caractérisation de capteurs</div>
+              <div class="field"><span class="k">Logiciels</span> MATLAB, Python</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+            <div class="module-card">
+              <h5>Machine Learning (cours + bureau d'études)</h5>
+              <div class="field"><span class="k">TP / travaux</span> Bureau d'études — apprentissage automatique ; projet de classification de fractures</div>
+              <div class="field"><span class="k">Techniques</span> CNN, transfer learning (VGG16), augmentation de données, fine-tuning</div>
+              <div class="field"><span class="k">Logiciels</span> Python, PyTorch, TensorFlow, Streamlit</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+            <div class="module-card">
+              <h5>Analyse et interprétation des images</h5>
+              <div class="field"><span class="k">TP / travaux</span> Segmentation d'images (étude comparative)</div>
+              <div class="field"><span class="k">Techniques</span> Contours actifs (Snakes, Chan-Vese), U-Net</div>
+              <div class="field"><span class="k">Logiciels</span> Python, OpenCV, API (FastAPI)</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+            <div class="module-card">
+              <h5>Analyse spectrale des signaux et systèmes</h5>
+              <div class="field"><span class="k">TP / travaux</span> Rapport, code et données de TP</div>
+              <div class="field"><span class="k">Techniques</span> Modèles AR, Yule-Walker, Levinson, Burg</div>
+              <div class="field"><span class="k">Logiciels</span> MATLAB, LaTeX</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
+            <div class="module-card">
+              <h5>Modélisation et estimation pour les signaux et systèmes</h5>
+              <div class="field"><span class="k">TP / travaux</span> Rapport, code et données de TP</div>
+              <div class="field"><span class="k">Techniques</span> Modélisation et estimation de signaux</div>
+              <div class="field"><span class="k">Logiciels</span> MATLAB</div>
+              <div class="tp-links"><a href="#" class="tp-link">Rapport, code et données →</a></div>
+            </div>
           </div>
         </div>
 
+        <!-- ================= ENSTA ================= -->
+        <div class="timeline-item">
+          <p class="when">2019 – 2024</p>
+          <h3>Master 2 — Systèmes Embarqués</h3>
+          <p class="where">École Nationale Supérieure des Technologies Avancées (ENSTA), Alger — mention Bien</p>
+          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Maîtrise des microcontrôleurs, des protocoles de communication embarqués (CAN, UART, SPI, I2C) et de la conception de systèmes temps réel — le socle qui me permet aujourd'hui de déployer mes modèles d'IA sur cible embarquée.</p>
+        </div>
       </div>
 
-      <h3 class="tp-sem">Semestre 8</h3>
-      <div class="tp-grid">
-
-        <div class="tp-card">
-          <h4>Analyse et interprétation des images</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
-          </div>
+      <div class="trio" style="margin-top:36px;">
+        <div>
+          <h3>Langues</h3>
+          <div class="lang-row"><span>Français</span><b>C2</b></div>
+          <div class="lang-row"><span>Anglais</span><b>B2</b></div>
         </div>
-
-        <div class="tp-card">
-          <h4>Capteurs optiques et formation des images</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
-          </div>
+        <div>
+          <h3>Permis</h3>
+          <p style="font-size:.92rem;">Permis B</p>
         </div>
-
-        <div class="tp-card">
-          <h4>Bureau d'études — Apprentissage automatique</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
-          </div>
+        <div>
+          <h3>Centres d'intérêt</h3>
+          <p style="font-size:.92rem;">Yoga · Cuisine · Pâtisserie · Jardinage · Voyages</p>
         </div>
-
-        <div class="tp-card">
-          <h4>Analyse spectrale des signaux et systèmes</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
-          </div>
-        </div>
-
-        <div class="tp-card">
-          <h4>Modélisation et estimation pour les signaux et systèmes</h4>
-          <div class="tp-links">
-            <a href="#" class="tp-link">Voir le rapport, le code et les données →</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -221,9 +302,43 @@
 <section id="projets">
     <div class="wrap">
       <h2 class="section-title">Projets</h2>
-      <p class="lede" style="margin-bottom:26px;">Six projets couvrant la chaîne complète perception → décision, du capteur bas niveau jusqu'au modèle de deep learning.</p>
+      <p class="lede" style="margin-bottom:26px;">Huit projets couvrant la chaîne complète perception → décision, du capteur bas niveau jusqu'au modèle de deep learning, l'interface logicielle et l'agent IA.</p>
 
       <div class="project-grid">
+
+        <article class="project-card">
+          <p class="when"><span class="badge-soon">Lancement</span><br>2026</p>
+          <h3>Agent IA d'accompagnement des étudiants à l'immigration</h3>
+          <p class="cadre">Projet personnel · IA / LLM</p>
+          <div class="field">
+            <span class="k">Objectif</span>
+            Accompagner les étudiants dans leur projet d'études à l'étranger : choix de l'université et de la spécialité, perspectives de carrière et de salaires, informations utiles à l'installation.
+          </div>
+          <div class="field">
+            <span class="k">Démarche</span>
+            Conception d'un agent conversationnel basé sur un LLM, structuration des informations sur les universités et filières, interface simple d'accès pour les étudiants.
+          </div>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Agent IA</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="when"><span class="badge-soon">En cours</span><br>2026</p>
+          <h3>IHM de traitement de données — Qt / C++</h3>
+          <p class="cadre">Projet académique · Développement logiciel</p>
+          <div class="field">
+            <span class="k">Objectif</span>
+            Créer une interface homme-machine pour le traitement et l'exploitation de données (signal / image).
+          </div>
+          <div class="field">
+            <span class="k">Démarche</span>
+            Conception de l'interface avec Qt en C++, intégration des modules de traitement, organisation du code et de l'interface utilisateur.
+          </div>
+          <div class="tag-row">
+            <span class="tag">C++</span><span class="tag">Qt</span><span class="tag">IHM</span><span class="tag">Traitement signal / image</span>
+          </div>
+        </article>
 
         <article class="project-card">
           <p class="when">2025–2026</p>
@@ -374,54 +489,7 @@
       </div>
     </div>
   </section>
-<section id="formation">
-    <div class="wrap">
-      <h2 class="section-title">Formation</h2>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <p class="when">2026 – 2027</p>
-          <h3>Master 2 — Signal, Image et Apprentissage Automatique</h3>
-          <p class="where">Université Toulouse III Paul Sabatier, Toulouse</p>
-          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Approfondissement en apprentissage profond et en traitement du signal/image avancé, avec une orientation projet et recherche.</p>
-        </div>
-        <div class="timeline-item">
-          <p class="when">2025 – 2026</p>
-          <h3>Master 1 — Signal, Image et Apprentissage Automatique</h3>
-          <p class="where">Université Toulouse III Paul Sabatier, Toulouse — 3<sup>e</sup> de promotion, mention Bien</p>
-          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Bases solides en machine learning, traitement d'images et analyse statistique de données — validées en tête de promotion sur plusieurs modules clés (apprentissage automatique, bureau d'études ML, capteurs optiques).</p>
-          <div class="stat-row">
-            <span class="stat">Moyenne générale <b>14,25/20</b></span>
-            <span class="stat">Apprentissage automatique <b>16,35/20</b> — 1<sup>er</sup>/24</span>
-            <span class="stat">Bureau d'études ML <b>16,09/20</b> — 1<sup>er</sup>/26</span>
-            <span class="stat">Capteurs optiques &amp; formation des images <b>16,85/20</b> — 2<sup>e</sup>/26</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <p class="when">2019 – 2024</p>
-          <h3>Master 2 — Systèmes Embarqués</h3>
-          <p class="where">École Nationale Supérieure des Technologies Avancées (ENSTA), Alger — mention Bien</p>
-          <p class="takeaway"><span class="k">Ce que j'en retiens</span> Maîtrise des microcontrôleurs, des protocoles de communication embarqués (CAN, UART, SPI, I2C) et de la conception de systèmes temps réel — le socle qui me permet aujourd'hui de déployer mes modèles d'IA sur cible embarquée.</p>
-        </div>
-      </div>
-
-      <div class="trio" style="margin-top:36px;">
-        <div>
-          <h3>Langues</h3>
-          <div class="lang-row"><span>Français</span><b>C2</b></div>
-          <div class="lang-row"><span>Anglais</span><b>B2</b></div>
-        </div>
-        <div>
-          <h3>Permis</h3>
-          <p style="font-size:.92rem;">Permis B</p>
-        </div>
-        <div>
-          <h3>Centres d'intérêt</h3>
-          <p style="font-size:.92rem;">Yoga · Cuisine · Pâtisserie · Jardinage · Voyages</p>
-        </div>
-      </div>
-    </div>
-  </section>
 <section id="references">
   <div class="wrap">
     <h2 class="section-title">Références</h2>
