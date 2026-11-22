@@ -1,11 +1,14 @@
 /* Animations du portfolio : réseau de neurones + signal nettoyé par la souris,
    apparition au scroll, projecteur sur les cartes, barre de progression. */
 (function(){
-var hero=document.querySelector('.hero');
+console.log('animation.js chargé');
+var hero=document.querySelector('.hero,#hero,#accueil,#home,#top');
+if(!hero){var h1=document.querySelector('h1');if(h1)hero=h1.closest('section,div,header');if(hero&&hero.matches('header.topbar'))hero=null}
+var fixed=!hero;
 // barre de progression
 var pb=document.createElement('div');pb.id='progress';document.body.appendChild(pb);
 addEventListener('scroll',function(){var h=document.documentElement;pb.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'},{passive:true});
- 
+
 // apparition au scroll
 var sel='.section-title,.lede,.project-card,.tp-card,.skill-group,.timeline-item,.cert-card,.ref-card,.soft-item,.trio>div,.motivation,.note-inline';
 var els=[].slice.call(document.querySelectorAll(sel));
@@ -16,13 +19,16 @@ if('IntersectionObserver' in window){
 // projecteur sur les cartes
 document.addEventListener('pointermove',function(e){var t=e.target.closest&&e.target.closest('.skill-group,.tp-card,.project-card,.cert-card,.ref-card,.trio>div,.soft-item');
  if(t){var r=t.getBoundingClientRect();t.style.setProperty('--x',e.clientX-r.left+'px');t.style.setProperty('--y',e.clientY-r.top+'px')}});
- 
+
 // canvas de l'en-tête
-if(!hero)return;
-var c=document.createElement('canvas');c.id='fx';c.setAttribute('aria-hidden','true');hero.insertBefore(c,hero.firstChild);
+var c=document.createElement('canvas');c.id='fx';c.setAttribute('aria-hidden','true');
+if(fixed){c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none';document.body.insertBefore(c,document.body.firstChild);
+ var st=document.createElement('style');st.textContent='main,section,footer,header{position:relative;z-index:1}';document.head.appendChild(st)}
+else{if(getComputedStyle(hero).position==='static')hero.style.position='relative';hero.style.overflow='hidden';c.style.zIndex='0';hero.insertBefore(c,hero.firstChild);
+ [].forEach.call(hero.children,function(ch){if(ch!==c&&getComputedStyle(ch).position==='static'){ch.style.position='relative';ch.style.zIndex='1'}})}
 var g=c.getContext('2d'),W,H,dpr,t=0,on=true,idle=true,mx=-999,my=-999,
     L=[4,7,7,5,3],N=[],act=[],pulses=[],k=1;
-function size(){dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0);
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=fixed?innerWidth:hero.clientWidth;H=fixed?innerHeight:hero.clientHeight;if(!H)H=500;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0);
  var small=W<760,x0=small?.06:.46,x1=small?.94:.95,y0=H*.14,y1=H*(small?.7:.74);k=small?.5:1;
  N=[];act=[];L.forEach(function(n,l){N[l]=[];act[l]=[];for(var i=0;i<n;i++){
   N[l].push({x:W*(x0+(x1-x0)*l/(L.length-1)),y:y0+(y1-y0)*(n==1?.5:i/(n-1)),ph:Math.random()*6.28});act[l].push(0)}});pulses=[]}
@@ -65,9 +71,8 @@ function draw(){
   if(a<.02)continue;g.globalAlpha=a;g.beginPath();g.moveTo(x,mid+(f(x)+nz(x)*1.1*(1-a))*amp);g.lineTo(x+3,mid+(f(x+3)+nz(x+3)*1.1*(1-a))*amp);g.stroke()}
  g.globalAlpha=1;g.shadowBlur=0}
 function loop(){if(on){t+=.011;draw()}requestAnimationFrame(loop)}
-hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;idle=false});
-hero.addEventListener('pointerleave',function(){idle=true});
-if('IntersectionObserver' in window)new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(hero);
+(fixed?window:hero).addEventListener('pointermove',function(e){var r=fixed?{left:0,top:0}:hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;idle=false});
+(fixed?window:hero).addEventListener(fixed?'blur':'pointerleave',function(){idle=true});
+if(!fixed&&'IntersectionObserver' in window)new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(hero);
 addEventListener('resize',size);size();loop();
 })();
- 
